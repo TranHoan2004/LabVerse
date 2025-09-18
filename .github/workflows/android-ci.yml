@@ -73,6 +73,10 @@ jobs:
           distribution: "temurin"
           java-version: '21'
 
+      - name: Grant execute permission for mvnw
+        run: chmod +x mvnw
+        working-directory: services/${{matrix.service}}
+
       - name: Build spring boot
         run: ./mvnw clean package -DskipTests
         working-directory: services/${{matrix.service}}

@@ -60,6 +60,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [android-build, detect-services]
     strategy:
+      fail-fast: false
       matrix:
         service: ${{ fromJSON(needs.detect-services.outputs.matrix) }}
     steps:

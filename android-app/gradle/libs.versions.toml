@@ -16,7 +16,7 @@ retrofit = "3.0.0"
 okhttp = "5.1.0"
 glide = "5.0.5"
 firebaseBom = "34.3.0"
-androidPdfViewer = "3.2.0-beta.1"
+androidPdfViewer = "3.1.0-beta.1"
 loggingInterceptor = "5.1.0"
 lottieVersion = "6.6.9"
 

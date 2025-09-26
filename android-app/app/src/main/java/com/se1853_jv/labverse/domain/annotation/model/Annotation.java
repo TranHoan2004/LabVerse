@@ -1,24 +1,16 @@
 package com.se1853_jv.labverse.domain.annotation.model;
 
-import androidx.room.PrimaryKey;
-
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import androidx.annotation.NonNull;
 
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
+@Data
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Annotation {
-    @PrimaryKey
-    String id;
-
     @NonNull
     Long coordinationX;
 
@@ -27,6 +19,8 @@ public class Annotation {
 
     @NonNull
     Integer pageNumber;
+
+    String colorCode;
 
     @NonNull
     String ownerId;

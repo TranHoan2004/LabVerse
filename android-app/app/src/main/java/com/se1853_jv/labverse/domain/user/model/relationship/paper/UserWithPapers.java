@@ -1,19 +1,14 @@
-package com.se1853_jv.labverse.domain.user.model;
+package com.se1853_jv.labverse.domain.user.model.relationship.paper;
 
 import androidx.room.Embedded;
-import androidx.room.Entity;
 import androidx.room.Relation;
 
 import com.se1853_jv.labverse.domain.paper.model.PaperResearch;
+import com.se1853_jv.labverse.domain.user.model.Users;
 
 import java.util.List;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Data

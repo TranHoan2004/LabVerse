@@ -1,10 +1,15 @@
-package com.se1853_jv.labverse.domain.collection.model;
+package com.se1853_jv.labverse.domain.citation.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 @Data
@@ -14,12 +19,13 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Collection {
+public class Citation {
     @PrimaryKey
     String id;
 
-    String name;
+    @NonNull
+    String title;
 
     @NonNull
-    String ownerId;
+    String paperResearchId;
 }

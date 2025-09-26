@@ -10,13 +10,13 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
-@Data
-@Entity
-@Builder
-@ToString
-@NoArgsConstructor
-@AllArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+//@Data
+//@Entity
+//@Builder
+//@ToString
+//@NoArgsConstructor
+//@AllArgsConstructor
+//@FieldDefaults(level = AccessLevel.PRIVATE)
 public class ClubPermission {
 
 }

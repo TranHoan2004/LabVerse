@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: se1853_jv
+  datasource:
+    url: jdbc:mysql://localhost:3306/reference?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: hoan2709
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  data:
+    mongodb:
+      password: 123
+      username: sa
+      uri: mongodb://localhost:27017
+      database: reference
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+server:
+  servlet:
+    context-path: /v1/api
+  port: 8081

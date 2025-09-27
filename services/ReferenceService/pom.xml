@@ -126,7 +126,32 @@
                 </executions>
                 <configuration>
                     <jvmTarget>21</jvmTarget>
+                    <compilerPlugins>
+                        <plugin>spring</plugin>
+                        <plugin>all-open</plugin>
+                        <plugin>no-arg</plugin>
+                    </compilerPlugins>
+                    <pluginOptions>
+                        <!-- all-open -->
+                        <option>all-open:annotation=jakarta.persistence.Entity</option>
+                        <option>all-open:annotation=jakarta.persistence.MappedSuperclass</option>
+                        <option>all-open:annotation=jakarta.persistence.Embeddable</option>
+                        <!-- no-arg -->
+                        <option>no-arg:annotation=jakarta.persistence.Entity</option>
+                    </pluginOptions>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-allopen</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.jetbrains.kotlin</groupId>
+                        <artifactId>kotlin-maven-noarg</artifactId>
+                        <version>${kotlin.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -162,41 +187,6 @@
                             <artifactId>lombok</artifactId>
                         </path>
                     </annotationProcessorPaths>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-allopen</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>allopen</id>
-                        <goals>
-                            <goal>allopen</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <annotation>jakarta.persistence.Entity</annotation>
-                    <annotation>jakarta.persistence.MappedSuperclass</annotation>
-                    <annotation>jakarta.persistence.Embeddable</annotation>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-noarg</artifactId>
-                <version>${kotlin.version}</version>
-                <executions>
-                    <execution>
-                        <id>noarg</id>
-                        <goals>
-                            <goal>noarg</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <annotation>jakarta.persistence.Entity</annotation>
                 </configuration>
             </plugin>
         </plugins>

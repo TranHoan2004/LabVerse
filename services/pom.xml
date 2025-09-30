@@ -8,9 +8,10 @@
     <artifactId>microservice-project</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
-
     <modules>
-        <module>src/EurekaServer</module>
+        <module>AccountService</module>
+        <module>ReferenceService</module>
+        <module>EurekaSever</module>
     </modules>
     <properties>
         <spring-cloud.version>2025.0.0</spring-cloud.version>

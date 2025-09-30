@@ -9,9 +9,6 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>src/EurekaServer</module>
-    </modules>
     <properties>
         <spring-cloud.version>2025.0.0</spring-cloud.version>
     </properties>

@@ -7,8 +7,6 @@ eureka:
     fetch-registry: true
     service-url:
       #      defaultZone: http://localhost:9001/eureka/, http://library:9002/eureka
-      defaultZone: http://localhost:9000/eureka/, http://labverse:9002/eureka
-  instance:
-    hostname: localhost
+      defaultZone: http://localhost:9000/eureka/, http://localhost:9002/eureka
 server:
   port: 9001

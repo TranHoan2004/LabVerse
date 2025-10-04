@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     id("io.freefair.lombok") version "8.14.2"
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -30,6 +31,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_15
         targetCompatibility = JavaVersion.VERSION_15
     }
+    kotlinOptions {
+        jvmTarget = "15"
+    }
 }
 
 dependencies {
@@ -42,6 +46,7 @@ dependencies {
     implementation(libs.cardview)
 
     implementation(libs.room.runtime)
+    implementation(libs.core.ktx)
     compileOnly(libs.lombok.v11830)
     compileOnly(libs.room.compiler)
     annotationProcessor(libs.lombok.v11830)
